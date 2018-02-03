@@ -1,3 +1,5 @@
+EM TRADUÇÃO
+
 jQuery Calendar Plugin
 ======================
 ### By Sam Sehnert, [Custom D](https://www.customd.com/) 2017
