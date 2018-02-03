@@ -49,7 +49,7 @@
 		maskdatelabel			: 'D, jS',
 		masktimelabel			: {
 			'00'	: 'g:i <\\sp\\a\\n>A<\/\\sp\\a\\n>',
-			'noon'	: '\\N\\O\\O\\N'
+			'noon'	: '\\M\E\\I\\O \\D\\I\\A'
 		},
 
 		// Either false, or an array of resources.
@@ -3416,15 +3416,15 @@
 
 	$[plugin_name].lang = {
 		// Use ISO 639-1 language codes, for now.
-		'en' : {
+		'pt' : {
 			// Text date/time representations.
-			short_month 	: Array('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'),
-			long_month		: Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'),
-			short_day		: Array('Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'),
-			long_day		: Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'),
+			short_month 	: Array('Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'),
+			long_month		: Array('Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'),
+			short_day		: Array('Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'),
+			long_day		: Array('Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'),
 			// Text labels.
-			label_remove	: 'Remove',
-			label_today		: 'Today'
+			label_remove	: 'Remover',
+			label_today		: 'Hoje'
 		}
 	};
 
@@ -3633,7 +3633,7 @@
 		if( !( NewDate instanceof Date ) || isNaN( NewDate ) ) NewDate = new Date();
 
 		// Default to EN, unless otherwise specified.
-		NewDate.lang = lang || 'en';
+		NewDate.lang = lang || 'pt';
 
 		NewDate.roundToDay = function(){
 			// Rounds a date object to the beginning of that day.
