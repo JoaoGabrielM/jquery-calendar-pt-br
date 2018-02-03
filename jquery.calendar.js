@@ -360,10 +360,10 @@
 					// Check which rule we've got.
 					switch( rule.freq )
 					{
-						case 'daily' :	_increment_by = interval+' Day'; break;
-						case 'weekly' :	_increment_by = interval+' Week'; break;
-						case 'monthly':	_increment_by = interval+' Month'; break;
-						case 'yearly' :	_increment_by = interval+' Year'; break;
+						case 'daily' :	_increment_by = interval+' Dia'; break;
+						case 'weekly' :	_increment_by = interval+' Semana'; break;
+						case 'monthly':	_increment_by = interval+' Mês'; break;
+						case 'yearly' :	_increment_by = interval+' Ano'; break;
 
 						// We can't handle any other frequency types at present, so if this is
 						// the case, break out and continue to the next iteration of rule_loop.
@@ -3437,7 +3437,7 @@
 		j: function() { return this.getDate(); },
 		l: function() { return $[plugin_name].lang[this.lang].long_day[this.getDay()]; },
 		N: function() { return this.getDay() + 1; },
-		S: function() { return (this.getDate() % 10 == 1 && this.getDate() != 11 ? 'st' : (this.getDate() % 10 == 2 && this.getDate() != 12 ? 'nd' : (this.getDate() % 10 == 3 && this.getDate() != 13 ? 'rd' : 'th'))); },
+		S: function() { return ('º'); },
 		w: function() { return this.getDay(); },
 		z: function() { if( window.console ){ console.error('Mask \'z\' Not Yet Supported'); }; return "z"; },
 		// Week
@@ -3454,8 +3454,8 @@
 		Y: function() { return this.getFullYear(); },
 		y: function() { return ('' + this.getFullYear()).substr(2); },
 		// Time
-		a: function() { return this.getHours() < 12 ? 'am' : 'pm'; },
-		A: function() { return this.getHours() < 12 ? 'AM' : 'PM'; },
+		a: function() { return this.getHours() < 12 ? 'manhã' : 'tarde'; },
+		A: function() { return this.getHours() < 12 ? 'MANHÃ' : 'TARDE'; },
 		B: function() { if( window.console ){ console.error('Mask \'B\' Not Yet Supported'); }; return "B"; },
 		g: function() { return this.getHours() == 0 ? 12 : (this.getHours() > 12 ? this.getHours() - 12 : this.getHours()); },
 		G: function() { return this.getHours(); },
